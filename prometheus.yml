@@ -1,0 +1,8 @@
+##This is the Prometheus configuration file needed to evaluate the performances through the metrics exported by node_exported
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+- job_name: node
+  static_configs:
+  - targets: ['192.168.20.19:9100','192.168.20.7:9100','192.168.20.21']
